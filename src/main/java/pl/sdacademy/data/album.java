@@ -1,8 +1,9 @@
 package pl.sdacademy.data;
 
 public class album {
+    public static final int ALBUM_SIZE = 50;
     private String name;
-    private Photo[] selectedPhotos =new Photo[50];
+    private Photo[] selectedPhotos =new Photo[ALBUM_SIZE];
     // TODO: zmienić na enum jako ćwieczenie po poznaniu w części zawansowanej
     private String[] categories;
 
@@ -18,11 +19,11 @@ public class album {
     }
 
     public void addPhotos(Photo... selectedPhotos) {
-        if(lastIndex == 49){
+        if(lastIndex == ALBUM_SIZE){
             System.out.println("Album pełen");
             return;
         }
-        if(lastIndex+selectedPhotos.length > 49 ){
+        if(lastIndex+selectedPhotos.length >= ALBUM_SIZE ){
             System.out.println("Album za mało miejsca");
             return;
         }

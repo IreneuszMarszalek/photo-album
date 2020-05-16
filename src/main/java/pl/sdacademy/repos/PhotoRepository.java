@@ -1,5 +1,6 @@
-package pl.sdacademy.data;
+package pl.sdacademy.repos;
 
+import pl.sdacademy.data.Photo;
 import java.time.LocalDate;
 
 public class PhotoRepository {

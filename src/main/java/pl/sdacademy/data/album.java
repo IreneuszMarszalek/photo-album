@@ -20,8 +20,9 @@ public class album {
     public void addPhotos(Photo... selectedPhotos) {
         if(lastIndex == 49){
             System.out.println("Album pełen");
+            return;
         }
-        if(lastIndex+selectedPhotos.length >49 ){
+        if(lastIndex+selectedPhotos.length > 49 ){
             System.out.println("Album za mało miejsca");
             return;
         }
@@ -40,5 +41,15 @@ public class album {
 
     public String[] getCategories() {
         return categories;
+    }
+
+    public void present() {
+        System.out.println("Album " + name + " zawiera następujące zdjęcia:");
+        if (lastIndex == 0) {
+            return;
+        }
+        for (int i = 0; i < lastIndex; i++) {
+            System.out.println(selectedPhotos[i].getPhotoName());
+        }
     }
 }

@@ -13,9 +13,8 @@ public class Application {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Podaj liczbę albumów");
         int numberOfAlbums = scanner.nextInt();
-
+        AlbumCreationParametersProvider parametersProvider = new AlbumCreationParametersProvider();
         for (int i = 0; i < numberOfAlbums; i++) {
-            AlbumCreationParametersProvider parametersProvider = new AlbumCreationParametersProvider();
             AlbumCreator creator = new AlbumCreator(parametersProvider);
             album album = creator.create();
 

@@ -1,0 +1,7 @@
+pl\sdacademy\Application.class
+pl\sdacademy\data\AlbumParameter.class
+pl\sdacademy\data\Photo.class
+pl\sdacademy\data\album.class
+pl\sdacademy\repos\PhotoRepository.class
+pl\sdacademy\album\AlbumCreator.class
+pl\sdacademy\album\AlbumCreationParametersProvider.class
